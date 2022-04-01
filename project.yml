@@ -1,0 +1,71 @@
+---
+settings:
+  name: Cloud Volumes Service for Google Cloud
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: ja-jp,us-en,zh-cn,ko-kr
+sidebar:
+  entries:
+  - title: Cloud Manager のすべてのドキュメント
+    url: https://docs.netapp.com/us-en/cloud-manager-family
+  - title: Cloud Volumes Service for Google Cloud のドキュメント
+    url: "/index.html"
+  - title: リリースノート
+    url: "/whats-new.html"
+  - title: はじめに
+    entries:
+    - title: Cloud Volumes Service for Google Cloud の詳細をご覧ください
+      url: "/concept-cvs-gcp.html"
+    - title: クイックスタート
+      url: "/task-quick-start.html"
+    - title: Google Cloud をセットアップします
+      url: "/task-set-up-google-cloud.html"
+    - title: 作業環境を作成
+      url: "/task-create-working-env.html"
+  - title: Cloud Volumes Service for Google Cloud を使用してください
+    entries:
+    - title: ボリュームを作成してマウント
+      url: "/task-create-volumes.html"
+    - title: 既存のボリュームを管理
+      url: "/task-manage-volumes.html"
+    - title: クラウドボリュームの Snapshot を管理します
+      url: "/task-manage-snapshots.html"
+    - title: Active Directory の設定を管理します
+      url: "/task-manage-active-directory.html"
+    - title: Cloud Volumes Service を削除します
+      url: "/task-remove-working-env.html"
+  - title: 知識とサポート
+    entries:
+    - title: サポートに登録します
+      url: "/task-support-registration.html"
+    - title: ヘルプを表示します
+      url: "/task-get-help.html"
+  - title: 法的通知
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: はじめに
+    links:
+    - title: Cloud Volumes Service for Google Cloud の詳細をご覧ください
+      url: concept-cvs-gcp.html
+    - title: クイックスタート
+      url: task-quick-start.html
+  - title: Cloud Volumes Service for Google Cloud を使用してください
+    links:
+    - title: ボリュームを作成します
+      url: task-create-volumes.html
+    - title: クラウドの Snapshot を管理します
+      url: task-manage-snapshots.html
+  - title: ブログコミュニティ
+    links:
+    - title: ネットアップコミュニティ
+      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+    - title: Cloud Central のブログです
+      url: https://cloud.netapp.com/blog
+    - title: クラウドに関する Web セミナー
+      url: https://cloud.netapp.com/events
+product-family: {}

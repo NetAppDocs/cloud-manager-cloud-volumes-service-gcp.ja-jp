@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes' 
+summary: Cloud Manager の Cloud Volumes Service for Google Cloud の新機能について説明します。 
+---
+= 新機能
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager の Cloud Volumes Service for Google Cloud の新機能について説明します。
+
+
+
+== 2020 年 9 月 9 日
+
+
+
+=== Cloud Volumes Service for Google Cloud のサポート
+
+Cloud Volumes Service for Google Cloud を Cloud Manager から直接管理できるようになりました。
+
+* 作業環境をセットアップして作成
+* Linux クライアントおよび UNIX クライアント用に、 NFSv3 ボリュームと NFSv4.1 ボリュームを作成および管理します
+* Windows クライアント用に SMB 3.x ボリュームを作成して管理します
+* ボリューム Snapshot を作成、削除、およびリストアします
+

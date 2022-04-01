@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: task-set-up-google-cloud.html 
+keywords: setup, set up, api, service account, requirements, permissions 
+summary: Cloud Manager は、 Cloud Volumes Service API にアクセスする必要があり、 Google Cloud サービスアカウントから適切な権限を取得する必要があります。 
+---
+= Google Cloud をセットアップします
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager は、 Cloud Volumes Service API にアクセスする必要があり、 Google Cloud サービスアカウントから適切な権限を取得する必要があります。
+
+
+
+== Cloud Volumes Service API を有効にします
+
+Google Cloud Shell で、次のコマンドを実行して Cloud Volumes Service API を有効にします。
+
+`gcloud --project=<my-cvs-project> サービスは cloudvolumesgcp-api.netapp.com` を有効にします
+
+
+
+== サービスアカウントを設定します
+
+Cloud Manager が Google Cloud プロジェクトにアクセスできるようにするには、次のタスクを実行します。
+
+* 新しいサービスアカウントを作成します
+* 新しいサービスアカウントメンバーをプロジェクトおよびに追加します IT 固有のロール（権限）の割り当て
+* サービスアカウントのキーペアを作成してダウンロードします Google への認証に使用されます
+
+
+.手順
+. Google Cloud コンソールで、 https://console.cloud.google.com/iam-admin/serviceaccounts["[ サービスアカウント ] ページに移動します"^]。
+. [ * プロジェクトの選択 * ] をクリックし、プロジェクトを選択して [ * 開く * ] をクリックします。
+. [ サービスアカウントの作成 *] をクリックします。
+. サービスアカウント名（フレンドリ表示名）と概要を入力します。
++
+Cloud Console は、この名前に基づいてサービスアカウント ID を生成します。必要に応じて ID を編集します。後で ID を変更することはできません。
+
+. 今すぐアクセスコントロールを設定するには、ページの下部にある「 * 作成 * 」、「完了 * 」の順にクリックして、次の手順に進みます。
+. _iam ページの _Click * Add * をクリックし、 _ Add Members_page のフィールドに入力します。
++
+.. [ 新しいメンバー ] フィールドに、 user1-service-account-cvs@project1.iam.gserviceaccount.com などの完全なサービスアカウント ID を入力します。
+.. 追加するロールは次のとおりです。
++
+*** NetApp Cloud Volumes Admin _
+*** ネットワークビューアを計算します _
+
+
+.. [ 保存（ Save ） ] をクリックします。
+
+
+. [ サービスアカウント名 ] をクリックし、 _Service アカウントの詳細ページで、 [ * キーの追加 > 新しいキーの作成 * ] をクリックします。
+. キーのタイプとして * json * を選択し、 * Create * をクリックします。
++
+[*Create] をクリックすると、新しい公開鍵と秘密鍵のペアが生成され、システムにダウンロードされます。秘密鍵の唯一のコピーとして機能します。このファイルは、サービスアカウントとしての認証に使用できるため、安全に保管してください。
+
+
+
+詳細な手順については、 Google Cloud のドキュメントを参照してください。
+
+* link:https://cloud.google.com/iam/docs/creating-managing-service-accounts["サービスアカウントの作成と管理"^]
+* link:https://cloud.google.com/iam/docs/granting-changing-revoking-access["リソースへのアクセスの許可、変更、取り消しを行います"^]
+* link:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["サービスアカウントキーの作成と管理"^]
+

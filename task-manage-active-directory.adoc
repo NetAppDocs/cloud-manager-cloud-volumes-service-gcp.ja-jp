@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: task-manage-active-directory.html 
+keywords: active directory, dns, domain, dns servers, smb server 
+summary: DNS サーバまたは Active Directory ドメインを変更した場合、クライアントに引き続きストレージを提供できるように、 Cloud Volumes Service で SMB サーバを変更する必要があります。 
+---
+= Active Directory の設定を管理します
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+DNS サーバまたは Active Directory ドメインを変更した場合、クライアントに引き続きストレージを提供できるように、 Cloud Volumes Service で SMB サーバを変更する必要があります。
+
+.手順
+. 作業環境を開きます。
+. をクリックします image:screenshot_gallery_options.gif[""] ボタンをクリックし、 * Active Directory の管理 * をクリックします。
++
+Active Directory が設定されていない場合は、ここで追加できます。設定済みの場合は、を使用して設定を変更または削除できます image:screenshot_gallery_options.gif[""] ボタンを押します。
+
+. SMB サーバの設定を指定します。
++
+[cols="25,75"]
+|===
+| フィールド | 説明 
+
+
+| DNS プライマリ IP アドレス | SMB サーバの名前解決を提供する DNS サーバの IP アドレス。複数のサーバを参照する場合は、カンマを使用して IP アドレスを区切ります。たとえば、 172.31.25.223 、 172.31.2.74 のようになります。 
+
+
+| 参加する Active Directory ドメイン | SMB サーバを参加させる Active Directory （ AD ）ドメインの FQDN 。 
+
+
+| SMB サーバの NetBIOS 名 | 作成する SMB サーバの NetBIOS 名を指定します。 
+
+
+| ドメインへの参加を許可されたクレデンシャル | AD ドメイン内の指定した組織単位（ OU ）にコンピュータを追加するための十分な権限を持つ Windows アカウントの名前とパスワード。 
+
+
+| 組織単位 | SMB サーバに関連付ける AD ドメイン内の組織単位。デフォルトでは、 Windows Active Directory サーバに接続するための CN=Computers が選択されます。 
+|===
+. [ 保存（ Save ） ] をクリックして、設定を保存します。
+

@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: task-remove-working-env.html 
+keywords: remove working environment, delete working environment, remove cloud volumes service, remove, delete 
+summary: Cloud Volumes Service for Google Cloud サブスクリプションと既存のすべてのボリュームを Cloud Manager から削除することができます。ボリュームは削除されず、 Cloud Manager インターフェイスから削除されます。 
+---
+= Cloud Volumes Service を Cloud Manager から削除
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes Service for Google Cloud サブスクリプションと既存のすべてのボリュームを Cloud Manager から削除することができます。ボリュームは削除されず、 Cloud Manager インターフェイスから削除されます。
+
+
+TIP: Cloud Manager から Cloud Volumes Service for Google Cloud サブスクリプションを削除することはできません。これは、 Google Cloud Console からのみ実行できます。
+
+.手順
+. 作業環境を開きます。
+. をクリックします image:screenshot_gallery_options.gif[""] ボタンをクリックし、「 Cloud Volumes Service の削除」をクリックします。
+. 確認ダイアログボックスで、 * 削除 * をクリックします。
+

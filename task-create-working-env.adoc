@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: task-create-working-env.html 
+keywords: cloud volumes service for gcp, google cloud, cloud volumes, create cloud volumes, discover cloud volumes service for gcp, cloud volumes service subscription, discover cloud volumes service subscription, discover region, allowed clients, create snapshots 
+summary: Cloud Manager で Cloud Volumes Service for Google Cloud の作業環境を作成し、ボリュームと Snapshot を作成および管理します。 
+---
+= Cloud Volumes Service for Google Cloud の作業環境を作成します
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ボリュームと Snapshot を作成および管理できるように、 Cloud Manager で Cloud Volumes Service for Google Cloud 作業環境を作成します。
+
+Google Cloud Console からボリュームを作成済みかどうかに関係なく、 Cloud Volumes Service for Google Cloud にサインアップしてまだボリュームを持っていない場合は、最初に GCP サブスクリプションに基づいてボリュームの作業環境を作成します。
+
+このサブスクリプション用のクラウドボリュームがすでに存在する場合、ボリュームは新しい作業環境に表示されます。GCP サブスクリプションにまだクラウドボリュームを追加していない場合は、新しい作業環境を作成した後で追加します。
+
+
+TIP: 複数の Google Cloud プロジェクトにサブスクリプションとボリュームがある場合は、プロジェクトごとにこのタスクを実行する必要があります。
+
+各プロジェクトのサブスクリプションを追加する際は、次の情報を確認しておく必要があります。
+
+* サービスアカウントのクレデンシャル（ダウンロードした JSON 秘密鍵）
+* プロジェクト名
+
+
+.手順
+. Cloud Manager で、新しい作業環境を追加し、場所として「 * Google Cloud * 」を選択し、「 * Continue * 」をクリックします。
+. 「 * Cloud Volumes Service * 」を選択し、「 * Continue * 」をクリックします。
++
+image:screenshot_add_cvs_gcp_working_env.png["Cloud Volumes Service for GCP サブスクリプションの作業環境を追加するスクリーンショット。"]
+
+. Cloud Volumes Service サブスクリプションに関する情報を入力します。
++
+.. 使用する作業環境名を入力します。
+.. 前の手順でダウンロードした JSON 秘密鍵をコピーして貼り付けます。
+.. Google Cloud プロジェクトの名前を選択します。
+.. [* Continue （続行） ] をクリックします
++
+image:screenshot_add_cvs_gcp_credentials.png["Cloud Volumes Service for GCP サブスクリプションのクレデンシャルを追加するスクリーンショット。"]
+
+
+
+
+
+Cloud Manager に Cloud Volumes Service for Google Cloud の作業環境が表示されます。
+
+image:screenshot_cvs_gcp_cloud.png["Cloud Volumes Service for Google Cloud 作業環境のスクリーンショット。"]
+
+このサブスクリプションに Cloud Volume がすでに存在する場合は、新しい作業環境にボリュームが表示されます。Cloud Manager からクラウドボリュームを追加することができます。
+
+このサブスクリプションにクラウドボリュームが存在しない場合は、ここで作成します。
+
+link:task-create-volumes.html["ボリュームの作成を開始します"]。

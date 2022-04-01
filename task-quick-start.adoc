@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: task-quick-start.html 
+keywords: quick start, set up cloud volumes service 
+summary: これらの手順を実行するか、リンク先を参照して詳細を確認してください。 
+---
+= Cloud Volumes Service for Google Cloud のクイックスタート
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+これらの手順を実行するか、リンク先を参照して詳細を確認してください。
+
+[role="quick-margin-para"]
+Google で、 Cloud Volumes Service for GCP API を有効にして、 Cloud Manager がサブスクリプションとクラウドボリュームを管理できるようにします。
+
+[role="quick-margin-para"]
+link:task-set-up-google-cloud.html["API を有効にする方法について説明します"]。
+
+[role="quick-margin-para"]
+Google で、サービスアカウントとロールを作成して、 Cloud Manager から Cloud Volumes Service for Google Cloud アカウントにアクセスできるようにします。
+
+[role="quick-margin-para"]
+link:task-set-up-google-cloud.html#set-up-a-service-account["サービスアカウントの設定方法について説明します"]。
+
+[role="quick-margin-para"]
+Cloud Manager で、 * 作業環境の追加 * > * Google Cloud * > * Cloud Volumes Service * をクリックし、サービスアカウントと Google Cloud プロジェクトの詳細を指定します。
+
+[role="quick-margin-para"]
+link:task-create-working-env.html["作業環境の作成方法について説明します"]。

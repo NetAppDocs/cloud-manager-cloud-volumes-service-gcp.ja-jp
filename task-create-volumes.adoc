@@ -1,0 +1,154 @@
+---
+sidebar: sidebar 
+permalink: task-create-volumes.html 
+keywords: cloud volumes service for gcp, google cloud, cloud volumes, create cloud volumes, mount volume 
+summary: Cloud Manager では、 Cloud Volumes Service for Google Cloud サブスクリプションに基づいてクラウドボリュームを作成できます。ボリュームを作成したら、クライアントにボリュームをマウントできるように、関連するマウントコマンドを取得します。 
+---
+= ボリュームを作成してマウント
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager では、 Cloud Volumes Service for Google Cloud サブスクリプションに基づいてクラウドボリュームを作成できます。ボリュームを作成したら、クライアントにボリュームをマウントできるように、関連するマウントコマンドを取得します。
+
+
+
+== ボリュームを作成します
+
+Cloud Volumes Service または SMB ボリュームは、新規または既存の Google Cloud アカウントで作成できます。現在、クラウドボリュームは、 Linux クライアントと UNIX クライアントでは NFSv3 と NFSv4.1 、 Windows クライアントでは SMB 3.x をサポートしています。
+
+.作業を開始する前に
+* GCP で SMB を使用する場合は、 DNS と Active Directory を設定しておく必要があります。
+* SMB ボリュームを作成する場合は、接続可能な Windows Active Directory サーバが必要です。この情報は、ボリュームの作成時に入力します。また、管理者ユーザが指定された Organizational Unit （ OU ；組織単位）パスでマシンアカウントを作成できることを確認してください。
+
+
+.手順
+. 作業環境を選択し、 * 新しいボリュームの追加 * をクリックします。
+. 詳細と場所ページで、ボリュームの詳細を入力します。
++
+.. ボリュームの名前を入力します。
+.. 1TiB （ 1024GiB ）から 100TiB までの範囲のサイズを指定します。
++
+link:https://cloud.google.com/solutions/partners/netapp-cloud-volumes/selecting-the-appropriate-service-level-and-allocated-capacity-for-netapp-cloud-volumes-service#allocated_capacity["割り当て容量に関する詳細情報"^]。
+
+.. サービスレベルとして、 Standard 、 Premium 、または Extreme を指定します。
++
+link:https://cloud.google.com/solutions/partners/netapp-cloud-volumes/selecting-the-appropriate-service-level-and-allocated-capacity-for-netapp-cloud-volumes-service#service_levels["サービスレベルの詳細については、こちらをご覧ください"^]。
+
+.. Google Cloud リージョンを選択します。
+.. ボリュームにアクセスできる VPC ネットワークを選択します。ボリュームの作成後に VPC を変更または編集することはできません。
+.. [* Continue （続行） ] をクリックします
++
+image:screenshot_cvs_gcp_vol_details_page.png["ボリュームの詳細ページのスクリーンショットで、名前、サイズ、およびサービスレベルを指定します"]
+
+
+
+. プロトコルページで、 NFS または SMB を選択し、詳細を定義します。NFS と SMB の必須のエントリは、以下の個別のセクションに表示されます。
+. NFS の場合：
++
+.. ボリュームパスフィールドで、ボリュームのマウント時に表示されるボリュームエクスポートの名前を指定します。
+.. 要件に応じて、 NFSv3 、 NFSv4.1 、またはその両方を選択します。
+.. 必要に応じて、エクスポートポリシーを作成して、ボリュームにアクセスできるクライアントを特定することができます。を指定します。
++
+*** IP アドレスまたは Classless Inter-Domain Routing （ CIDR ）を使用して、許可するクライアントを設定します。
+*** アクセス権は読み取り / 書き込みまたは読み取り専用です。
+*** ユーザに使用するアクセスプロトコル（ボリュームで NFSv3 と NFSv4.1 の両方のアクセスが許可されている場合はプロトコル）。
+*** 追加のエクスポートポリシールールを定義する場合は、「 * + エクスポートポリシールールの追加」をクリックします。
++
+次の図は、 NFS プロトコルの [Volume] ページの設定を示しています。
+
++
+image:screenshot_cvs_gcp_nfs_details.png["NFS Cloud Volumes Service ボリュームについて入力されたボリュームページを示すスクリーンショット。"]
+
+
+
+
+
+. SMB の場合：
++
+.. [ ボリュームパス ] フィールドで、ボリュームをマウントしたときに表示されるボリュームエクスポートの名前を指定し、 [ 続行 ] をクリックします。
+.. Active Directory が設定されている場合は、設定が表示されます。最初にセットアップするボリュームで、 Active Directory が設定されていない場合は、 SMB 接続のセットアップページで SMB セッション暗号化を有効にできます。
++
+[cols="25,75"]
+|===
+| フィールド | 説明 
+
+
+| DNS プライマリ IP アドレス | SMB サーバの名前解決を提供する DNS サーバの IP アドレス。複数のサーバを参照する場合は、カンマを使用して IP アドレスを区切ります。たとえば、 172.31.25.223 、 172.31.2.74 のようになります。 
+
+
+| 参加する Active Directory ドメイン | SMB サーバを参加させる Active Directory （ AD ）ドメインの FQDN 。 
+
+
+| SMB サーバの NetBIOS 名 | 作成する SMB サーバの NetBIOS 名を指定します。 
+
+
+| ドメインへの参加を許可されたクレデンシャル | AD ドメイン内の指定した組織単位（ OU ）にコンピュータを追加するための十分な権限を持つ Windows アカウントの名前とパスワード。 
+
+
+| 組織単位 | SMB サーバに関連付ける AD ドメイン内の組織単位。デフォルトでは、 Windows Active Directory サーバに接続するための CN=Computers が選択されます。 
+|===
++
+次の図は、 SMB プロトコルの [Volume] ページの設定を示しています。
+
++
+image:screenshot_cvs_smb_details.png["SMB Cloud Volumes Service ボリュームについて設定されたボリュームページを示すスクリーンショット。"]
+
+
+
+. [* Continue （続行） ] をクリックします
+. 既存のボリュームの Snapshot に基づいてボリュームを作成する場合は、 Snapshot 名ドロップダウンリストから Snapshot を選択します。それ以外の場合は、 [* Continue （続行） ] をクリック
+. Snapshot ポリシーページでは、 Cloud Volumes Service を有効にして、スケジュールに基づいてボリュームの Snapshot コピーを作成できます。選択範囲を右に移動するか、ボリュームをあとから編集して Snapshot ポリシーを定義できます。
++
+を参照してください link:task-manage-cloud-volumes-gcp-snapshots.html#create_or_modify_a_snapshot_policy["Snapshot ポリシーを作成しています"^] Snapshot 機能の詳細については、を参照してください。
+
+. [ ボリュームの追加 ] をクリックします。
+
+
+新しいボリュームが作業環境に追加されます。
+
+に進みます link:task-manage-cvs-gcp.html#mount-the-cloud-volume["クラウドボリュームをマウント"]。
+
+
+
+== クラウドボリュームをマウント
+
+Cloud Manager でのマウント手順を参照して、ホストにボリュームをマウントできるようにします。
+
+
+NOTE: クライアントでサポートされているハイライトされたプロトコル / ダイアレクトを使用します。
+
+.手順
+. 作業環境を開きます。
+. ボリュームにカーソルを合わせ、 * ボリュームをマウント * をクリックします。
++
+NFS ボリュームと SMB ボリュームには、そのプロトコルのマウント手順が表示されます。
+
+. コマンドにカーソルを合わせてクリップボードにコピーすると、この処理が簡単になります。コマンドの最後にデスティネーションのディレクトリ / マウントポイントを追加するだけです。
++
+* nfs の例： *
+
++
+image:screenshot_cvs_aws_nfs_mount.png["NFS ボリュームのマウント手順"]
+
++
+rsize' および wsize オプションで定義された最大 I/O サイズは 1048576 ですが、ほとんどのユースケースでは 65536 が推奨されています。
+
++
+「 rs=<nfs_version>` 」オプションで指定した場合を除き、 Linux クライアントのデフォルトは NFSv4.1 です。
+
++
+* SMB の例： *
+
++
+image:screenshot_cvs_aws_smb_mount.png["SMB ボリュームのマウント手順"]
+
+. インスタンスのマウント手順に従って、ネットワークドライブをマッピングします。
++
+マウント手順の手順を完了すると、クラウドボリュームが GCP インスタンスに正常にマウントされます。
+
+
