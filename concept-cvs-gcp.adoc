@@ -40,7 +40,7 @@ link:https://console.cloud.google.com/marketplace/product/endpoints/cloudvolumes
 
 == サポートされている地域
 
-link:https://cloud.google.com/solutions/partners/netapp-cloud-volumes/regional-availability["サポートされている Google Cloud リージョンを表示します。"^]
+https://cloud.netapp.com/cloud-volumes-global-regions#cvsGc["サポートされている Google Cloud リージョンを表示します。"^]
 
 
 

@@ -139,7 +139,6 @@
   <block id="8e1046c4123260638fe451866f95441f" category="paragraph"><block ref="8e1046c4123260638fe451866f95441f" category="inline-link-macro-rx"></block></block>
   <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">サポートされている地域</block>
   <block id="b781da83c6614728483efd98a6c45ff6" category="inline-link-macro">サポートされている Google Cloud リージョンを表示します。</block>
-  <block id="289503068ec55e9bb2927b20b2944861" category="paragraph"><block ref="289503068ec55e9bb2927b20b2944861" category="inline-link-macro-rx"></block></block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="section-title">始める前に</block>
   <block id="ba1ec04f6bf2ff4dcb3909ab4182292d" category="inline-link">NetApp Cloud Volumes Service for Google Cloud のドキュメント</block>
   <block id="3e3b8b12f3052c6c4f7e3e489f336477" category="paragraph">Cloud Manager では、既存の Cloud Volumes Service for GCP サブスクリプションとボリュームを検出できます。を参照してください<block ref="8cef80fbd20b45fcd51e638492e90799" category="inline-link-rx"></block> 月額プランをまだ設定していない場合は、</block>
@@ -213,11 +212,8 @@
   <block id="396a17f0ed51b9c5c6e2c2d382b9da29" category="paragraph"><block ref="396a17f0ed51b9c5c6e2c2d382b9da29" category="inline-image-macro-rx" type="image"></block></block>
   <block id="14ec8544f74cfa351aff62abf80e7ce1" category="list-text">既存のボリュームの Snapshot に基づいてボリュームを作成する場合は、 Snapshot 名ドロップダウンリストから Snapshot を選択します。それ以外の場合は、 [* Continue （続行） ] をクリック</block>
   <block id="a09c1495afba572d0857c83823cd2bad" category="list-text">Snapshot ポリシーページでは、 Cloud Volumes Service を有効にして、スケジュールに基づいてボリュームの Snapshot コピーを作成できます。選択範囲を右に移動するか、ボリュームをあとから編集して Snapshot ポリシーを定義できます。</block>
-  <block id="ba33208e705836c12b7e1e6e2fa6b492" category="inline-link-macro">Snapshot ポリシーを作成しています</block>
-  <block id="7235c4b075858250025ea5e2846d9c56" category="paragraph">を参照してください <block ref="bb3b670ab2c393f994b7ce337a4620ef" category="inline-link-macro-rx"></block> Snapshot 機能の詳細については、を参照してください。</block>
   <block id="5e65e2e51d0d291499a42f54730e645c" category="list-text">[ ボリュームの追加 ] をクリックします。</block>
   <block id="45dbe3c136df615d693b80183c277a3b" category="paragraph">新しいボリュームが作業環境に追加されます。</block>
-  <block id="a619b30d8586f1269f45bac77eca7781" category="paragraph">に進みます <block ref="c1cfc9c0a0127f96cabac57cf381c0f1" category="inline-link-macro-rx"></block>。</block>
   <block id="45bb1e3eab26b4479c1c1d8bdd6bf2f5" category="section-title">クラウドボリュームをマウント</block>
   <block id="86a3efaabfd178d684bcd98f4cd6434c" category="paragraph">Cloud Manager でのマウント手順を参照して、ホストにボリュームをマウントできるようにします。</block>
   <block id="b80e741400898b02fa02ae6451578a24" category="admonition">クライアントでサポートされているハイライトされたプロトコル / ダイアレクトを使用します。</block>
@@ -300,4 +296,8 @@
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">クラウドに関する Web セミナー</block>
   <block id="b2926ec1332a3412430ef48cae1f9bc2" category="sidebar">Cloud Volumes Service を使用します</block>
   <block id="a633f0835832cc75f5a83248a8aa2ba8" category="section-title">2020 年 9 月 9 日</block>
+  <block id="939e2552f14c2db1e32edf892141ef1f" category="paragraph"><block ref="939e2552f14c2db1e32edf892141ef1f" category="inline-link-rx"></block></block>
+  <block id="ced63c567878ed01730fce043c8ade96" category="inline-link-macro">Snapshot ポリシーを作成します</block>
+  <block id="e45bbeae66bd2af06ef994ec4e9682b9" category="paragraph">方法をご確認ください <block ref="4733085e77073b15a79afc35f8d9b896" category="inline-link-macro-rx"></block>。</block>
+  <block id="0753d577f87c3ce7385e295a5cc23407" category="paragraph">クラウドボリュームのマウントに進みます。</block>
 </blocks>

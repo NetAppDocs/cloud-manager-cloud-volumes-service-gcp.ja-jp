@@ -104,14 +104,14 @@ image:screenshot_cvs_smb_details.png["SMB Cloud Volumes Service ボリューム�
 . 既存のボリュームの Snapshot に基づいてボリュームを作成する場合は、 Snapshot 名ドロップダウンリストから Snapshot を選択します。それ以外の場合は、 [* Continue （続行） ] をクリック
 . Snapshot ポリシーページでは、 Cloud Volumes Service を有効にして、スケジュールに基づいてボリュームの Snapshot コピーを作成できます。選択範囲を右に移動するか、ボリュームをあとから編集して Snapshot ポリシーを定義できます。
 +
-を参照してください link:task-manage-cloud-volumes-gcp-snapshots.html#create_or_modify_a_snapshot_policy["Snapshot ポリシーを作成しています"^] Snapshot 機能の詳細については、を参照してください。
+方法をご確認ください link:task-manage-snapshots.html["Snapshot ポリシーを作成します"]。
 
 . [ ボリュームの追加 ] をクリックします。
 
 
 新しいボリュームが作業環境に追加されます。
 
-に進みます link:task-manage-cvs-gcp.html#mount-the-cloud-volume["クラウドボリュームをマウント"]。
+クラウドボリュームのマウントに進みます。
 
 
 
