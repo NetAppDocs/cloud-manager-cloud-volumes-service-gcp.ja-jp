@@ -7,6 +7,7 @@ summary: NetApp Cloud Volumes Service for Google Cloud は、高度なデータ�
 ---
 = Cloud Volumes Service for Google Cloud のドキュメント
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

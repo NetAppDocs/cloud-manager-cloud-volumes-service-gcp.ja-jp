@@ -6,6 +6,7 @@ summary: Cloud Manager では、 Cloud Volumes Service for Google Cloud サブ�
 ---
 = ボリュームを作成してマウント
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: Cloud Manager は、 Cloud Volumes Service API にアクセスする必
 ---
 = Google Cloud をセットアップします
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

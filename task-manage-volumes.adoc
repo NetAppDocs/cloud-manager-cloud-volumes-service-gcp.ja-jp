@@ -6,6 +6,7 @@ summary: 既存のボリュームは、ストレージのニーズの変化に�
 ---
 = 既存のボリュームを管理
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

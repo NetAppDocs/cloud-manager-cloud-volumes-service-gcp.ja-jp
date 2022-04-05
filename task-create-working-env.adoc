@@ -6,6 +6,7 @@ summary: Cloud Manager で Cloud Volumes Service for Google Cloud の作業環�
 ---
 = Cloud Volumes Service for Google Cloud の作業環境を作成します
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

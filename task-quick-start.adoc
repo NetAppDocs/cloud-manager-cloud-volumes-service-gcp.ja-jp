@@ -6,6 +6,7 @@ summary: これらの手順を実行するか、リンク先を参照して詳�
 ---
 = Cloud Volumes Service for Google Cloud のクイックスタート
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

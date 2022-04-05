@@ -6,6 +6,7 @@ summary: Cloud Volumes Service for Google Cloud サブスクリプションと�
 ---
 = Cloud Volumes Service を Cloud Manager から削除
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
